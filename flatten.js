@@ -21,7 +21,7 @@ const assertArraysEqual = function(array1, array2) {
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual}] === ${expected}`);
+    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`❌❌❌ Assertion Failed: ${actual} !==  ${expected}`);
   }
@@ -39,22 +39,20 @@ function eqArrays(array1, array2){
   return true;
 }
 
-function without(list, removers){
-  newlist = [];
-  for(let i = 0; i<list.length; i++){
-    if (!removers.includes(list[i])){
-      newlist.push(list[i]);
-
+function flatten(array){
+  let flattenArray = [];
+  for(let i = 0 ;i<array.length; i++){
+    if(Array.isArray(array[i])){
+      for(let j = 0; j<array[i].length; j++){
+        flattenArray.push(array[i][j]);
+        console.log(flattenArray);
+      }
     }
+    else{
+      flattenArray.push(array[i])}
   }
-  return newlist;
+  return flattenArray;
 }
-// TEST CODE
-assertArraysEqual(without([1, 2, 3], [1]), [2,3]); // => should PASS
-assertArraysEqual(without([1, 2, 3], [1]), [2,3]); // => should PASS
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ['1', '2']); // => ["1", "2"]
+console.log(flatten([1,2,[1,2,3]]));
 
-const words = ["hello", "world", "lighthouse"];
-without(["hello", "world", "lighthouse"], ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(flatten([1,2,[1,2,3]]), [1,2,1,2,3]); // => should PASS
