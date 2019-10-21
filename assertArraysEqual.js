@@ -6,7 +6,6 @@ const assertArraysEqual = function(array1, array2) {
   } else {
     console.log(`❌❌❌ Assertion Failed: [${array1}] !==  [${array2}]`);
   }
-  return;
 };
 
 module.exports = assertArraysEqual;
