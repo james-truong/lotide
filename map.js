@@ -29,11 +29,11 @@ const assertArraysEqual = function(array1, array2) {
 
 module.exports = map;
 
-const results1 = map(words, word => word[0]);
-assertArraysEqual(results1, ['g','c','t','m','t']);
+// const results1 = map(words, word => word[0]);
+// assertArraysEqual(results1, ['g','c','t','m','t']);
 
-const results2 = map(['hi', 'whatsup', 'yo'], word => word[0]);
-assertArraysEqual(results2, ['h','w','y']);
+// const results2 = map(['hi', 'whatsup', 'yo'], word => word[0]);
+// assertArraysEqual(results2, ['h','w','y']);
 
-const results3 = map(words, word => word+word);
-assertArraysEqual(results3, ['groundground','controlcontrol','toto', 'majormajor', 'tomtom']);
+// const results3 = map(words, word => word+word);
+// assertArraysEqual(results3, ['groundground','controlcontrol','toto', 'majormajor', 'tomtom']);

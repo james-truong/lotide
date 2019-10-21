@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@james-truong/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini lodash clone featuring comparisons of objects, lists and nested ones.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -18,7 +18,8 @@
     "type": "git",
     "url": "git+https://github.com/james-truong/lotide.git"
   },
-  "author": "",
+  "author": "James Truong (http://github.com/james-truong)"
+  ,
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/james-truong/lotide/issues"
