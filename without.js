@@ -49,6 +49,7 @@ function without(list, removers){
   }
   return newlist;
 }
+module.exports = without;
 // TEST CODE
 assertArraysEqual(without([1, 2, 3], [1]), [2,3]); // => should PASS
 assertArraysEqual(without([1, 2, 3], [1]), [2,3]); // => should PASS

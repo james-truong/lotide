@@ -56,4 +56,4 @@ const assertObjectsEqual = function(actual, expected) {
 
 };
 
-console.log(assertObjectsEqual({a : 'b'}, {a : 'b'}), true);
+module.exports = assertObjectsEqual;

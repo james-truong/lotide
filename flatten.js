@@ -53,6 +53,4 @@ function flatten(array){
   }
   return flattenArray;
 }
-console.log(flatten([1,2,[1,2,3]]));
-
-assertArraysEqual(flatten([1,2,[1,2,3]]), [1,2,1,2,3]); // => should PASS
+module.exports = flatten;
