@@ -1,26 +1,17 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-const assertEqual = require('./assertEqual');
-// FUNCTION IMPLEMENTATION
-
-
-function middle(array){
-  let middle = [];
-  if (array.length === 0 || array.length === 1 || array.length === 2){
-    return middle;
-  }
-  else{
-    if(array.length % 2 === 1){
-      middle.push(array[Math.floor(array.length / 2)]);
-    }
-    else{
-      middle.push(array[Math.floor(((array.length-1)/2))]);
-      middle.push(array[Math.ceil(((array.length-1)/2))]);
-    }
-  }
-  return middle;
-}
-
-// TEST CODE
+const middle = function(array) {
+  let mid = [];
+  let mid1 = (array.length / 2) - 1;
+  let mid2 = array.length / 2;
+  if (array.length < 3) {
+    return mid = [];
+  } else if (array.length % 2 === 0) {
+    mid.push(array[mid1]);
+    mid.push(array[mid2]);
+  } else {
+    mid.push((array[Math.ceil(mid1)]));
+  } 
+  return mid;
+};
+console.log(middle([1,2,3,4]));
 
 module.exports = middle;
